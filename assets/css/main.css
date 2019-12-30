@@ -1,5 +1,9 @@
+:root{
+  --primary-color : #f1f1f1;
+  --secondary-color : #a9a9a9;
+}
 body{
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Architects Daughter', cursive;  /* font-family: 'Orbitron', sans-serif; */
   background-image: radial-gradient(#454545,#000);
   background-repeat: no-repeat;
   background-position: center;
@@ -7,7 +11,8 @@ body{
   background-attachment: fixed;
   margin:0;
   padding:0;
-  color:#f1f1f1;
+  /* text-align: center; */
+  color:var(--primary-color);
 }
 .navbar{
   width:100%;
@@ -22,16 +27,16 @@ body{
   align-items: center;
 }
 .navbar-brand{
+  color:var(--secondary-color);
   font-size: 1.2rem;
   text-decoration: none;
-  color:#a9a9a9;
   transition: all 0.4s linear;
 }
 .navbar-link{
   position: relative;
   padding:0.5rem 1rem;
   text-decoration: none;
-  color:#a9a9a9;
+  color:var(--secondary-color);
   transition: all 0.4s linear;
 }
 .navbar-link::before{
@@ -49,7 +54,6 @@ body{
 }
 .navbar-link:hover::before{
   transform: scaleY(1);
-
 }
 .navbar-link:hover , .navbar-brand:hover{
   color:#e2e2e2;
@@ -64,22 +68,48 @@ body{
   padding:1rem;
 
 }
-.profile{
-  display: flex;
-  justify-content:space-around;
-  text-align: center;
+@media only screen and (min-width: 601px){
+  .profile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .profile-name{
+
+    font-size: 6rem;
+    margin:2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-left:3rem; */
+    text-transform:uppercase;
+  }
+  .profile-img{
+    width:400px;
+    border-radius: 10px;
+    text-align: right;
+  }
 }
-.profile-name{
-  font-size: 6rem;
-  margin:2rem 0rem;
-  display: inline-block;
-  /* margin-left:3rem; */
-  text-transform:uppercase;
-}
-.profile-img{
-  width:400px;
-  border-radius: 10px;
-  text-align: right;
+
+@media only screen and (max-width: 600px) {
+  .profile{
+    display: flex;
+  }
+  .profile-name{
+    font-size: 4rem;
+    margin:2rem 0rem;
+    display: inline-block;
+    /* margin-left:3rem; */
+    text-transform:uppercase;
+  }
+  .profile-img{
+    width:200px;
+    height:200px;
+    border-radius: 10px;
+    text-align: right;
+  }
+
 }
 .social-links{
   display: flex;
@@ -92,14 +122,17 @@ body{
   padding:0.5rem;
   transform: translateY(-40%);
   z-index: 10;
+  font-size: 1.3rem;
 }
 .social-link{
   padding:1rem;
   border-radius: 100%;
   transition: all 0.3s ease-in;
+  color:var(--secondary-color);
 }
 .social-link:hover{
-  font-size: 1.5rem;
+  color:var(--primary-color);
+  font-size: 1.6rem;
 }
 
 .about, .works{
