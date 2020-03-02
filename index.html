@@ -5,141 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
     <style media="screen">
     </style>
   </head>
 
-  <body>
+  <body class="md:w-1/3 md:mx-auto">
 
-      <nav class="navbar">
-        <div class="navbar-nav">
-          <a href="#" class="navbar-brand">Abhinav</a>
-          <div class="navbar-links">
-            <a href="#" class="navbar-link">About</a>
-            <a href="#" class="navbar-link">Works</a>
-            <a href="#" class="navbar-link">Blogs</a>
-          </div>
+    <div class="header">
+      <nav class="flex py-6 px-4 justify-between bg-black text-white items-center text-sm">
+        <div class="flex items-center">
+          <a href="" class="mr-4"><object class="h-4" data="assets/svg-icons/my-logo.svg" type=""></object> </a>
+          <a href="" class="hover:underline">RESUME</a>
+        </div>
+        <div class="flex">
+          <a href=""> <object class="h-4" data="assets/svg-icons/menu.svg" type=""></object></a>
         </div>
       </nav>
+      <object data="assets/svg-bgs/triangle1.svg" type=""></object>
+    </div>
 
-      <div class="social-links">
-        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+    <div class="profile flex flex-col items-center mt-6">
+      <img src="assets/images/img1.jpg" alt="abhinav rastogi" class="w-48 h-48 object-cover object-top rounded-full my-2"/>
+      <p class="text-center px-12 my-2 font-bold text-blue-x">Hello! I am a Web developer and Designer from New Delhi</p>
+      <button class="bg-blue-x text-white hover:bg-gray-x px-4 py-2 rounded-lg my-12">CONTACT ME</button>
+    </div>
+
+    <object class="w-full px-4" data="assets/svg-bgs/section2.svg" type=""></object>
+    
+    <!-- My skills section -->
+    <div class="my-skills flex flex-col bg-blue-x items-center py-12">
+      
+      <div class="flex mx-12 items-center my-8">
+        <object class="w-16 mx-2" data="assets/svg-icons/skills.svg" type=""></object>
+        <h2 class="text-2xl mx-2 font-bold text-white">My Skills</h2>
       </div>
 
-      <div class="profile container">
-        <div class="">
-          <h1 class="profile-name">Abhinav<br>Rastogi</h1>
-          <p>Web Developer | Designer</p>
+
+      <!-- web d skill -->
+      <div class="flex flex-col w-3/4 my-12 mx-auto">
+        <div class="flex items-start justify-between">
+          <div class="flex flex-col mr-4">
+            <h3 class="text-lg font-bold">Web Development</h3>
+            <div class="text-white text-sm">
+              <p>UI/UX : Figma</p>
+              <p class="flex"><span class="mr-2">Frontend:</span> 
+                <span class="flex flex-col">
+                  <span>HTML5</span>
+                  <span>CSS3 : tailwindCss, bootstrap4</span>
+                  <span>JavaScript : Vue js, React</span>
+                </span>
+              </p>
+              <p>Backend : Node js, JAVA</p>
+            </div>
+          </div>
+          <div class="bg-gray-x p-4 rounded-lg">
+            <object class="w-10" data="assets/svg-icons/cms.svg" type=""></object>
+          </div>
         </div>
-        <img class="profile-img" src="assets/images/img1.jpg" alt="profile pic">
       </div>
-
-      <div class="about container">
-        <h3 class="about-heading">Education</h3>
-        <table class="education-table">
-          <tr>
-            <td>Master of Computer Applications</td>
-            <td>Department of Computer Science,University of Delhi</td>
-            <td>2019-2022</td>
-          </tr>
-          <tr>
-            <td>BSc Computer Science(Hons)</td>
-            <td>PGDAV College, University of Delhi</td>
-            <td>2016-2019</td>
-          </tr>
-          <tr>
-            <td>Intermediate</td>
-            <td>Sacred Hearts,CBSE</td>
-            <td>2015-2016</td>
-          </tr>
-          <tr>
-            <td>Matriculation</td>
-            <td>Sacred Hearts,CBSE</td>
-            <td>2013-2014</td>
-          </tr>
-        </table>
-        <h3 class="about-heading">Skills</h3>
-        <table class="skills-table">
-          <tr>
-            <td>HTML</td>
-            <td>s s s s s</td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td>s s s s s</td>
-            <td class="skill-s">Bootstrap | tailwindCSS</td>
-          </tr>
-          <tr>
-            <td>Javascript</td>
-            <td>s s s s s</td>
-            <td class="skill-s">Vue JS</td>
-          </tr>
-          <tr>
-            <td>C++</td>
-            <td>s s s s s</td>
-          </tr>
-          <tr>
-            <td>Java</td>
-            <td>s s s s s</td>
-          </tr>
-          <tr>
-            <td>Python</td>
-            <td>s s s s s</td>
-          </tr>
-          <tr>
-            <td>Php</td>
-            <td>s s s s s</td>
-            <td class="skill-s">Laravel</td>
-          </tr>
-          <tr>
-            <td>Android</td>
-            <td>s s s s s</td>
-          </tr>
-        </table>
-
-        <h3 class="about-heading">Personal Details</h3>
-        <table class="personal-details-table">
-          <tr>
-            <td>Home town</td>
-            <td>Bareilly, Uttar Pradesh</td>
-          </tr>
-          <tr>
-            <td>Local Address</td>
-            <td>Jubilee Hall, University of Delhi</td>
-          </tr>
-          <tr>
-            <td>Languages Known</td>
-            <td>Hindi | English</td>
-          </tr>
-
-        </table>
-
-        <h3 class="about-heading">Contact Details</h3>
-        <table class="contact-details-table">
-          <tr>
-            <td>Mobile Number</td>
-            <td>9808727553</td>
-          </tr>
-          <tr>
-            <td>Email id</td>
-            <td>abhinav.26aug@gmail.com</td>
-          </tr>
-        </table>
-
-      </div>
-
-      <div class="works container">
-        <div class="work">
-          <h4>Simon Game</h4>
+      
+      <!-- GD skill -->
+      <div class="flex flex-col w-3/4 my-12 mx-auto">
+        <div class="flex items-start justify-between">
+          <div class="bg-gray-x p-4 rounded-lg mr-4">
+            <object class="w-10" data="assets/svg-icons/design.svg" type=""></object>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-lg font-bold">Graphic Designing</h3>
+            <div class="text-white text-sm">
+              <p class="flex">
+                <span class="mr-2">Tools:</span> 
+                <span class="">Adobe Photoshop, Adobe Illustrator, Figma</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/fb20b3c2cd.js" crossorigin="anonymous"></script>
+      <!-- Programming skill -->
+      <div class="flex flex-col w-3/4 my-12 mx-auto">
+        <div class="flex items-start justify-between">
+          <div class="flex flex-col">
+            <h3 class="text-lg font-bold">Programming</h3>
+            <div class="text-white text-sm">
+              <p class="flex">
+                <span class="mr-2">Languages:</span> 
+                <span class="">JAVA, C++, Python</span>
+              </p>
+            </div>
+          </div>
+          <div class="bg-gray-x p-4 rounded-lg mr-4">
+            <object class="w-10" data="assets/svg-icons/data.svg" type=""></object>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <object class="w-full" data="assets/svg-bgs/triangle2.svg" type=""></object>
+
+    <!-- My education section -->
+    <div class="my-education flex flex-col items-center py-12">
+      
+      <div class="flex mx-12 items-center my-8">
+        <object class="w-16 mx-2" data="assets/svg-icons/owl.svg" type=""></object>
+        <h2 class="text-2xl mx-2 font-bold">My Education</h2>
+      </div>
+
+      <!-- ed1 -->
+      <div class="flex flex-col w-3/4 my-8 mx-auto ">
+        <div class="flex items-start ">
+          <div class="bg-gray-x p-2 rounded-lg mr-4">
+            <object class="w-6" data="assets/svg-icons/insurance.svg" type=""></object>
+          </div>
+          <div class="flex flex-col font-bold">
+            <span class="">Master in Computer Applications (MCA)</span>
+            <span class="text-blue-x text-sm">Department of Computer Science, University of Delhi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ed2 -->
+      <div class="flex flex-col w-3/4 my-8 mx-auto ">
+        <div class="flex items-start ">
+          <div class="bg-gray-x p-2 rounded-lg mr-4">
+            <object class="w-6" data="assets/svg-icons/mortarboard.svg" type=""></object>
+          </div>
+          <div class="flex flex-col font-bold">
+            <span class="">BSc(hons) Computer Science</span>
+            <span class="text-blue-x text-sm">PGDAV College, University of Delhi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ed3 -->
+      <div class="flex flex-col w-3/4 my-8 mx-auto ">
+        <div class="flex items-start ">
+          <div class="bg-gray-x p-2 rounded-lg mr-4">
+            <object class="w-6" data="assets/svg-icons/book.svg" type=""></object>
+          </div>
+          <div class="flex flex-col font-bold">
+            <span class="">10th and 12th</span>
+            <span class="text-blue-x text-sm">Sacred Hearts, CBSE,
+              Bareilly, UP</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <object class="w-48 ml-auto px-10" data="assets/svg-icons/overtime.svg" type=""></object>
+
+    <!-- My works section -->
+    <div class="my-works flex flex-col items-center py-12 bg-gray-x">
+      <div class="flex mx-12 items-center my-8">
+        <object class="w-16 mx-2" data="assets/svg-icons/work.svg" type=""></object>
+        <h2 class="text-2xl mx-2 font-bold text-white">My Works</h2>
+      </div>
+    </div>
+
+    <object class="w-full" data="assets/svg-bgs/rectangle.svg" type=""></object>
+
+    <div class="footer flex flex-col items-center bg-black py-4">
+      <object class="h-12" data="assets/svg-icons/my-logo.svg" type=""></object>
+      <div class="flex my-6">
+        <a href="" class="mx-2">
+          <object class="h-6" data="assets/svg-icons/facebook.svg" type=""></object>
+        </a>
+        <a href="" class="mx-2">
+          <object class="h-6" data="assets/svg-icons/linkedin.svg" type=""></object>
+        </a>
+        <a href="" class="mx-2">
+          <object class="h-6" data="assets/svg-icons/cat.svg" type=""></object>
+        </a>
+        <a href="" class="mx-2">
+          <object class="h-6" data="assets/svg-icons/instagram.svg" type=""></object>
+        </a>
+      </div>
+      <div class="mt-12 text-white flex items-center">
+        <object class="h-3 mr-1" data="assets/svg-icons/copyright.svg" type=""></object>
+        <p>2020 Abhinav Rastogi</p>
+      </div>
+    </div>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 
   </body>
 </html>
