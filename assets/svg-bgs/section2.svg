@@ -1,9 +1,53 @@
-<svg width="341" height="75" viewBox="0 0 341 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M272 0L341 21V75H272V0Z" fill="#0047FF"/>
-<path d="M197 37L254 16V75H197V37Z" fill="#0047FF"/>
-<path d="M134 31L179 41V75H134V31Z" fill="#0047FF"/>
-<path d="M88 64L117 45V75H88V64Z" fill="#0047FF"/>
-<path d="M49 43L72 53V75H49V43Z" fill="#0047FF"/>
-<path d="M20 61L34 54V75H20V61Z" fill="#0047FF"/>
-<path d="M0 61L7 68V75H0V61Z" fill="#0047FF"/>
-</svg>
+    <svg width="360" height="76" viewBox="0 0 360 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#0047FF">
+          <animate attributeName="d" values="
+          M282 0L351 21V75H282V0Z;
+          M282 21L351 0V75H282V0Z;
+          M282 0L351 21V75H282V0Z;
+          "
+          dur="1s"  repeatCount="indefinite" />
+      </path>
+      <path d="" fill="#0047FF">
+        <animate attributeName="d" values="
+        M207 37L264 16V75H207V37Z;
+        M207 16L264 37V75H207V37Z;
+        M207 37L264 16V75H207V37Z;
+        " dur="1s" repeatCount="indefinite"/>
+      </path>
+      <path d="" fill="#0047FF">
+        <animate attributeName="d" values="
+        M144 31L189 41V75H144V31Z;
+        M144 41L189 31V75H144V31Z;
+        M144 31L189 41V75H144V31Z;
+        " dur="1s" repeatCount="indefinite"/>
+      </path>
+      <path d="" fill="#0047FF">
+        <animate attributeName="d" values="
+        M98 64L127 45V75H98V64Z;
+        M98 45L127 64V75H98V64Z;
+        M98 64L127 45V75H98V64Z        
+        " dur="1s" repeatCount="indefinite"/>
+      </path>
+      <path d="" fill="#0047FF">
+        <animate attributeName="d" values="
+        M59 43L82 53V75H59V43Z;
+        M59 53L82 43V75H59V43Z;
+        M59 43L82 53V75H59V43Z;
+        " dur="1s" repeatCount="indefinite"/>
+      </path>
+      <path d="" fill="#0047FF">
+        <animate attributeName="d" values="
+        M30 61L44 54V75H30V61Z;
+        M30 54L44 61V75H30V61Z;
+        M30 61L44 54V75H30V61Z;
+        " dur="1s" repeatCount="indefinite"/>
+      </path>
+      <path d="" fill="#0047FF">
+        <animate attributeName="d" values="
+        M10 61L17 68V75H10V61Z;
+        M10 68L17 61V75H10V61Z;
+        M10 61L17 68V75H10V61Z;
+        " dur="1s" repeatCount="indefinite"/>
+      </path>
+      </svg>
+
