@@ -16,6 +16,6 @@ body{
 .text-blue-x{
   color:var(--color-blue);
 }
-.min-h-32rem{
-  min-height: 32rem;
+.min-h-28rem{
+  min-height: 28rem;
 }
