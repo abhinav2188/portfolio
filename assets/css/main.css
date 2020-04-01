@@ -27,6 +27,9 @@ body{
 .poster-container > img {
   scroll-snap-align: start;
 }
+.poster-container > object {
+  scroll-snap-align: start;
+}
 .poster-container::-webkit-scrollbar {
   display: none;
 }

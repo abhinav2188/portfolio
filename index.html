@@ -12,26 +12,56 @@
 
   <body class="md:w-1/3 md:mx-auto">
 
+    <div id="msgModal" class="z-30 fixed flex w-auto px-4 py-2 
+    left-1/2 transform -translate-x-1/2 -translate-y-full top-0 text-xs font-bold bg-yellow-200 
+    transition-all duration-500 ease-out"></div>
+
     <div class="header">
       <nav class="flex py-6 px-4 justify-between bg-black text-white items-center text-sm">
         <div class="flex items-center">
           <a href="" class="mr-4"><object class="h-4" data="assets/svg-icons/my-logo.svg" type=""></object> </a>
-          <a href="" class="hover:underline">RESUME</a>
+          <a href="file:./assets/CV.pdf" target="_blank" class="hover:underline">RESUME</a>
         </div>
         <div class="flex">
-          <a href=""> <object class="h-4" data="assets/svg-icons/menu.svg" type=""></object></a>
+          <button onclick="showSidebar()"> <img class="h-4" src="assets/svg-icons/menu.svg" alt="" /></button>
         </div>
       </nav>
       <object data="assets/svg-bgs/triangle1.svg" type=""></object>
     </div>
 
+    <div>
+      <div id="sidebarBackdrop" class="z-10 fixed top-0 bg-black w-screen h-screen hidden transition-all duration-500 ease-out opacity-0" onclick="hideSidebar()"></div>
+      <div id="sidebar" class="z-20 fixed top-0 right-0 bg-gray-900 h-screen w-3/5 transform translate-x-full transition-all duration-500 ease-out">
+        <nav class="flex flex-col py-4 px-2 text-white text-sm h-full">
+          <div class="my-2 flex flex-col items-center">
+            <img src="assets/svg-icons/my-logo.svg" alt="" class="w-12 my-1"/>
+            <p class="my-1">Abhinav Rastogi</p>
+          </div>
+          <hr class="border-gray-800"/>
+          <div class="flex-grow flex flex-col my-4 ml-2 ">
+            <a href="./pages/posters.html" class="my-2">Poster Designs</a>
+            <a href="#" class="my-2">Blog template</a>
+            <a href="#" class="my-2">Notes app</a>
+            <a href="#" class="my-2">Simon game</a>
+          </div>
+          <hr class="border-gray-800"/>
+          <p class="my-4 self-center text-xs">
+            <span id="email">abhinav.26aug@gmail.com</span>
+            <button onclick="copyEmailToClipboard()">
+              <img class="h-2 ml-2" src="./assets/svg-icons/copy.svg" alt="">
+            </button>
+          </p>
+        </nav>
+      </div> 
+    </div>
+
     <div class="profile flex flex-col items-center mt-6">
       <img src="assets/images/img1.jpg" alt="abhinav rastogi" class="w-48 h-48 object-cover object-top rounded-full my-2"/>
       <p class="text-center px-12 my-2 font-bold text-blue-x">Hello! I am a Web developer and Designer from New Delhi</p>
-      <button class="bg-blue-x text-white hover:bg-gray-x px-4 py-2 rounded-lg my-12">CONTACT ME</button>
+      <a href="mailto:abhinav.26aug@gmail.com" class="bg-blue-x text-white hover:bg-gray-x px-4 py-2 rounded-lg my-12" target="_top">CONTACT ME</a>
     </div>
 
-    <object class="w-full" style="transform: translateY(2px);" data="assets/svg-bgs/section2.svg" type=""></object>
+    <img class="w-full transform translate-y-2" src="./assets/svg-bgs/section2.svg" alt="">
     
     <!-- My skills section -->
     <div class="my-skills flex flex-col bg-blue-x items-center py-12">
@@ -165,54 +195,25 @@
   
       <!-- posters -->
   
-      <!-- <div class="flex flex-col items-center my-8">
-        <h3 class="pb-1 border-b text-white my-8">POSTERS/ICON DESIGNS</h3>
-        <div class="flex items-center justify-center my-8 overflow-x-hidden min-h-28rem">
-          <img id="poster-display-left" class="w-1/3  shadow-lg rounded-sm mx-2 opacity-25"  alt="">
-          <img id="poster-display-center" class="w-3/5 shadow-lg rounded-sm mx-2" alt="">
-          <img id="poster-display-right" class="w-1/3 shadow-lg rounded-sm mx-2 opacity-25" alt="">
-        </div>
-        <div class="flex justify-between">
-          <button class="p-4 mx-2 rounded-full bg-gray-600" onClick="prevPoster()">
-            <img class="h-2" src="assets/svg-icons/prev.svg" alt=""></img>
-          </button>
-          <button class="p-4 mx-2 rounded-full bg-gray-600" onClick="nextPoster()">
-            <img class="h-2" src="assets/svg-icons/next.svg" alt=""></img>
-          </button>
-
-        </div>
-        <a href="" class="underline text-blue-x text-xs my-2 ml-auto mr-4">show all></a>
+      <h3 class="pb-1 border-b text-white my-4">POSTERS/ICON DESIGNS</h3>
+      <div class="flex overflow-x-scroll w-11/12 mx-auto poster-container my-8 items-center">
+        <img class="my-2 w-full px-8" src="./assets/images/resized posters/Buzzer.png" alt="">
+        <img class="my-2 w-full px-8" src="./assets/images/resized posters/Qafia.png" alt="">
+        <img class="my-2 w-full px-8" src="./assets/images/resized posters/Sankalan-main.png" alt="">
+        <img class="my-2 w-full px-8" src="./assets/images/resized posters/solo singing dark.png" alt="">
+        <img class="my-2 w-full px-8" src="./assets/images/resized posters/Spunk Western Solo Dance.png" alt="">
+        <img class="my-2 w-full px-8" src="./assets/images/logos/bionest2.svg" alt="">
       </div>
-       -->
 
-       <h3 class="pb-1 border-b text-white my-8">POSTERS/ICON DESIGNS</h3>
-       <div class="flex overflow-x-scroll w-11/12 mx-auto poster-container my-8">
-        <img class="w-full py-2 px-8 object-contain" src="assets\images\posters\Sankalan-main.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\Iris.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\Buzzer2.jpg" alt="">
-        <img class="w-full py-2 px-8 object-contain" src="assets\images\posters\Enact street play.jpg" alt="">
-        <img class="w-full py-2 px-8 object-contain" src="assets\images\posters\exploranza-main.jpg" alt="">
-  
-        <img class="w-full py-2 px-8" src="assets\images\posters\Battle of Bands 2.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\Buzzer.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\hindi slam poetry 3.jpg" alt="">
- 
-        <img class="w-full py-2 px-8 object-contain" src="assets\images\posters\solo singing dark.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\Grey Matter.jpg" alt="">
-        <img class="w-full py-2 px-8 object-contain" src="assets\images\posters\paper dressing.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\Dj Wars.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\Impressions.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\Treasure Hunt.jpg" alt="">
- 
-        <img class="w-full py-2 px-8" src="assets\images\posters\Qafia.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\Spunk Street Dance.jpg" alt="">
-        <img class="w-full py-2 px-8 object-contain" src="assets\images\posters\xenium final.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\Spunk Western Group Dance.jpg" alt="">
-        <img class="w-full py-2 px-8" src="assets\images\posters\Rapbeats Beatbox Battle.jpg" alt="">
-        <img class="w-full py-2 px-8 object-contain" src="assets\images\posters\solo singing 3.jpg" alt="">
-        
-       </div>
-  
+      <a class="self-end text-sm text-blue-700 mr-4 font-bold" href="./pages/posters.html">show all</a>
+       
+       <!-- <h3 class="pb-1 border-b text-white my-8">WEB ANIMATIONS</h3>
+       <div class="flex overflow-x-scroll mx-auto poster-container my-8">
+          <div class="border border-1 rounded-lg ">
+              
+          </div>
+       </div> -->
+
     </div>
 
     <object class="w-full" data="assets/svg-bgs/rectangle.svg" type=""></object>
