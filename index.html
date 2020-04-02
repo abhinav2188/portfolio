@@ -12,48 +12,49 @@
 
   <body class="md:w-1/3 md:mx-auto">
 
+    <!-- message model -->
     <div id="msgModal" class="z-30 fixed flex w-auto px-4 py-2 
     left-1/2 transform -translate-x-1/2 -translate-y-full top-0 text-xs font-bold bg-yellow-200 
     transition-all duration-500 ease-out"></div>
 
-    <div class="header">
+    <!-- header  -->
+    <header>
       <nav class="flex py-6 px-4 justify-between bg-black text-white items-center text-sm">
         <div class="flex items-center">
           <a href="" class="mr-4"><object class="h-4" data="assets/svg-icons/my-logo.svg" type=""></object> </a>
-          <a href="file:./assets/CV.pdf" class="hover:underline">RESUME</a>
+          <a href="./assets/CV.pdf" download="resume_abhinav" class="hover:underline">RESUME</a>
         </div>
         <div class="flex">
           <button onclick="showSidebar()"> <img class="h-4" src="assets/svg-icons/menu.svg" alt="" /></button>
         </div>
       </nav>
       <object data="assets/svg-bgs/triangle1.svg" type=""></object>
-    </div>
+    </header>
 
-    <div>
-      <div id="sidebarBackdrop" class="z-10 fixed top-0 bg-black w-full h-full hidden transition-all duration-500 ease-out opacity-0" onclick="hideSidebar()"></div>
-      <div id="sidebar" class="z-20 fixed top-0 right-0 bg-gray-900 h-full w-3/5 transform translate-x-full transition-all duration-500 ease-out">
-        <nav class="flex flex-col py-4 px-2 text-white text-sm h-full">
-          <div class="my-2 flex flex-col items-center">
-            <img src="assets/svg-icons/my-logo.svg" alt="" class="w-12 my-1"/>
-            <p class="my-1">Abhinav Rastogi</p>
-          </div>
-          <hr class="border-gray-800"/>
-          <div class="flex-grow flex flex-col my-4 ml-2 ">
-            <a href="./pages/posters.html" class="my-2">Poster Designs</a>
-            <a href="#" class="my-2">Blog template</a>
-            <a href="#" class="my-2">Notes app</a>
-            <a href="#" class="my-2">Simon game</a>
-          </div>
-          <hr class="border-gray-800"/>
-          <p class="my-4 self-center text-xs">
-            <span id="email">abhinav.26aug@gmail.com</span>
-            <button onclick="copyEmailToClipboard()">
-              <img class="h-2 ml-2" src="./assets/svg-icons/copy.svg" alt="">
-            </button>
-          </p>
-        </nav>
-      </div> 
-    </div>
+    <!-- sidebar -->
+    <div id="sidebarBackdrop" class="z-10 fixed top-0 bg-black w-full h-full hidden transition-all duration-500 ease-out opacity-0" onclick="hideSidebar()"></div>
+    <div id="sidebar" class="z-20 fixed top-0 right-0 bg-gray-900 h-full w-3/5 transform translate-x-full transition-all duration-500 ease-out">
+      <nav class="flex flex-col py-4 px-2 text-white text-sm h-full">
+        <div class="my-2 flex flex-col items-center">
+          <img src="assets/svg-icons/my-logo.svg" alt="" class="w-12 my-1"/>
+          <p class="my-1">Abhinav Rastogi</p>
+        </div>
+        <hr class="border-gray-800"/>
+        <div class="flex-grow flex flex-col my-4 ml-2 ">
+          <a href="./pages/posters.html" class="my-2">Poster Designs</a>
+          <a href="#" class="my-2">Blog template</a>
+          <a href="#" class="my-2">Notes app</a>
+          <a href="#" class="my-2">Simon game</a>
+        </div>
+        <hr class="border-gray-800"/>
+        <p class="my-4 self-center text-xs">
+          <span id="email">abhinav.26aug@gmail.com</span>
+          <button onclick="copyEmailToClipboard()">
+            <img class="h-2 ml-2" src="./assets/svg-icons/copy.svg" alt="">
+          </button>
+        </p>
+      </nav>
+    </div> 
 
     <div class="profile flex flex-col items-center mt-6">
       <img src="assets/images/img1.jpg" alt="abhinav rastogi" class="w-48 h-48 object-cover object-top rounded-full my-2"/>
