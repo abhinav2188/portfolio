@@ -27,8 +27,44 @@ function copyEmailToClipboard() {
     msgModel.classList.remove("top-0");
     msgModel.classList.add("top-1/5");
     setTimeout( () => {msgModel.classList.add("top-0"); msgModel.classList.remove("top-1/5")} ,2000);
-
   }
+
+  const t1 = document.querySelector("#tpath1");
+  const d1 = t1.getAttribute('d');
+  const d11 = d1.slice(0,9);
+  const d12= d1.slice(11);
+  let ht1 = d1.slice(9,11);
+  //   M0 0H360V45L0 0Z
+//     M360 0H0V45L360 0Z
+  const t2 = document.querySelector("#tpath2");
+  const d2 = t2.getAttribute('d');
+  const d21 = d2.slice(0,9);
+  const d22= d2.slice(11);
+  let ht2 = d2.slice(9,11);
+  
+  window.addEventListener('scroll',function(e) {
+    let scrollPercent = (document.documentElement.scrollTop / (this.document.documentElement.clientHeight)).toFixed(2);
+    console.log(document.documentElement.offsetHeight);
+    console.log(document.documentElement.clientHeight);
+    console.log(document.documentElement.scrollTop);
+    
+    
+    
+    let v1 = ((1-scrollPercent) * ht1).toFixed(2);
+    // let v2 = ((1-scrollPercent) * ht2).toFixed(2);
+    // console.log(d21+v2+d22);
+    t1.setAttribute('d',d11+v1+d12);
+    // t2.setAttribute('d',d21+v2+d22);
+  });
+
+//   window.onload = () => {
+//     let cwt = document.documentElement.clientWidth;
+//     if(cwt > 600){
+//         t1.setAttribute('d',d11+25+d12);
+//         ht1 = 25;
+//     }
+//     console.log("load");
+//   }
 // let posters = [
 //     'iris.jpg',
 //     'Qafia.jpg',

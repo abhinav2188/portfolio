@@ -10,7 +10,7 @@
     </style>
   </head>
 
-  <body class="md:w-1/3 md:mx-auto">
+  <body class="md:text-lg text-sm">
 
     <!-- message model -->
     <div id="msgModal" class="z-30 fixed flex w-auto px-4 py-2 
@@ -18,23 +18,25 @@
     transition-all duration-500 ease-out"></div>
 
     <!-- header  -->
-    <header>
-      <nav class="flex py-6 px-4 justify-between bg-black text-white items-center text-sm">
+    <header class="fixed top-0 w-full z-10">
+      <nav class="flex md:py-8 py-6 md:px-8 px-4 justify-between bg-black text-white items-center md:text-lg text-sm">
         <div class="flex items-center">
-          <a ref="" class="mr-4"><object class="h-4" data="assets/svg-icons/my-logo.svg" type=""></object> </a>
+          <a ref="" class="mr-4"><object class="md:h-6 h-4" data="assets/svg-icons/my-logo.svg" type=""></object> </a>
           <a href="./assets/CV.pdf" download="abhinav_resume" class="hover:underline">Download Resume</a>
         </div>
         <div class="flex">
           <button onclick="showSidebar()"> <img class="h-4" src="assets/svg-icons/menu.svg" alt="" /></button>
         </div>
       </nav>
-      <object data="assets/svg-bgs/triangle1.svg" type=""></object>
+      <svg class="w-full md:h-24" viewBox="0 0 360 45" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path id="tpath1" d="M0 0H360V45L0 0Z" fill="black"/>
+      </svg>
     </header>
 
     <!-- sidebar -->
     <div id="sidebarBackdrop" class="z-10 fixed top-0 bg-black w-full h-full hidden transition-all duration-500 ease-out opacity-0" onclick="hideSidebar()"></div>
-    <div id="sidebar" class="z-20 fixed top-0 right-0 bg-gray-900 h-full w-3/5 transform translate-x-full transition-all duration-500 ease-out">
-      <nav class="flex flex-col py-4 px-2 text-white text-sm h-full">
+    <div id="sidebar" class="z-20 fixed top-0 right-0 bg-gray-900 h-full md:w-1/5 w-3/5 transform translate-x-full transition-all duration-500 ease-out">
+      <nav class="flex flex-col py-4 px-2 text-white md:text-lg text-sm h-full">
         <div class="my-2 flex flex-col items-center">
           <img src="assets/svg-icons/my-logo.svg" alt="" class="w-12 my-1"/>
           <p class="my-1">Abhinav Rastogi</p>
@@ -49,38 +51,41 @@
           <a href="#" class="my-2">Simon game</a>
         </div>
         <hr class="border-gray-800"/>
-        <p class="my-4 self-center text-xs">
+        <p class="my-4 self-center md:text-sm text-xs">
           <span id="email">abhinav.26aug@gmail.com</span>
           <button onclick="copyEmailToClipboard()">
-            <img class="h-2 ml-2" src="./assets/svg-icons/copy.svg" alt="">
+            <img class="md:h-3 h-2 ml-2" src="./assets/svg-icons/copy.svg" alt="">
           </button>
         </p>
       </nav>
     </div> 
 
-    <div class="profile flex flex-col items-center mt-6">
-      <img src="assets/images/img1.jpg" alt="abhinav rastogi" class="w-48 h-48 object-cover object-top rounded-full my-2"/>
+    <div class="profile flex flex-col items-center md:mt-48 mt-32">
+      <img src="assets/images/img1.jpg" alt="abhinav rastogi" class="md:h-64 md:w-64 w-48 h-48 object-cover object-top rounded-full my-2"/>
       <p class="text-center px-12 my-2 font-bold text-blue-x">Hello! I am a Web developer and Designer from New Delhi</p>
-      <a href="mailto:abhinav.26aug@gmail.com" class="bg-blue-x text-white hover:bg-gray-x px-4 py-2 rounded-lg my-12" target="_top">CONTACT ME</a>
+      <a href="mailto:abhinav.26aug@gmail.com" class="bg-blue-x text-white hover:bg-gray-x px-4 py-2 rounded-lg my-12 " target="_top">CONTACT ME</a>
     </div>
 
-    <img class="w-full transform translate-y-2" src="./assets/svg-bgs/section2.svg" alt="">
+    <div class="flex">
+      <img class="md:w-1/2 w-full inline-block" style="transform: scaleX(-1) translateY(0.5rem);" src="./assets/svg-bgs/section2.svg" alt="">
+      <img class="md:w-1/2 w-full transform translate-y-2 md:inline-block hidden" src="./assets/svg-bgs/section2.svg" alt="">
+    </div>
     
     <!-- My skills section -->
-    <div class="my-skills flex flex-col bg-blue-x items-center py-12">
+    <div class="my-skills flex flex-col bg-blue-x items-center md:py-16 py-12 md:px-48">
       
       <div class="flex mx-12 items-center my-8">
-        <object class="w-16 mx-2" data="assets/svg-icons/skills.svg" type=""></object>
-        <h2 class="text-2xl mx-2 font-bold text-white">My Skills</h2>
+        <object class="md:w-32 w-16 mx-2" data="assets/svg-icons/skills.svg" type=""></object>
+        <h2 class="md:text-4xl text-2xl mx-2 font-bold text-white">My Skills</h2>
       </div>
 
-
+      <div class="flex md:flex-row flex-col justify-around w-full md:my-12">
       <!-- web d skill -->
-      <div class="flex flex-col w-3/4 my-12 mx-auto">
-        <div class="flex items-start justify-between">
-          <div class="flex flex-col mr-4">
-            <h3 class="text-lg font-bold">Web Development</h3>
-            <div class="text-white text-sm">
+      <div class="flex flex-col w-3/4 my-12 mx-auto md:p-8 ">
+        <div class="flex md:flex-col md:items-center items-start justify-between ">
+          <div class="flex flex-col md:mr-0 mr-4 md:order-2 md:items-center">
+            <h3 class="md:text-2xl text-lg font-bold md:mb-4">Web Development</h3>
+            <div class="text-white md:text-lg text-sm">
               <p>UI/UX : Figma</p>
               <p class="flex"><span class="mr-2">Frontend:</span> 
                 <span class="flex flex-col">
@@ -92,21 +97,21 @@
               <p>Backend : Node js, JAVA</p>
             </div>
           </div>
-          <div class="bg-gray-x p-4 rounded-lg">
-            <object class="w-10" data="assets/svg-icons/cms.svg" type=""></object>
+          <div class="md:bg-transparent bg-gray-x p-4 rounded-lg md:order-1">
+            <object class="md:w-16 w-10" data="assets/svg-icons/cms.svg" type=""></object>
           </div>
         </div>
       </div>
       
       <!-- GD skill -->
-      <div class="flex flex-col w-3/4 my-12 mx-auto">
-        <div class="flex items-start justify-between">
-          <div class="bg-gray-x p-4 rounded-lg mr-4">
-            <object class="w-10" data="assets/svg-icons/design.svg" type=""></object>
+      <div class="flex flex-col w-3/4 my-12 mx-auto md:p-8">
+        <div class="flex md:flex-col md:items-center  items-start justify-between">
+          <div class="md:bg-transparent bg-gray-x p-4 rounded-lg mr-4">
+            <object class="md:w-16 w-10" data="assets/svg-icons/design.svg" type=""></object>
           </div>
-          <div class="flex flex-col">
-            <h3 class="text-lg font-bold">Graphic Designing</h3>
-            <div class="text-white text-sm">
+          <div class="flex flex-col md:items-center">
+            <h3 class="md:text-2xl text-lg font-bold md:mb-4">Graphic Designing</h3>
+            <div class="text-white md:text-lg text-sm">
               <p class="flex">
                 <span class="mr-2">Tools:</span> 
                 <span class="">Adobe Photoshop, Adobe Illustrator, Figma</span>
@@ -117,27 +122,31 @@
       </div>
 
       <!-- Programming skill -->
-      <div class="flex flex-col w-3/4 my-12 mx-auto">
-        <div class="flex items-start justify-between">
-          <div class="flex flex-col">
-            <h3 class="text-lg font-bold">Programming</h3>
-            <div class="text-white text-sm">
+      <div class="flex flex-col w-3/4 my-12 mx-auto md:p-8">
+        <div class="flex md:flex-col md:items-center items-start justify-between">
+          <div class="flex flex-col md:order-2 md:items-center">
+            <h3 class="md:text-2xl text-lg font-bold md:mb-4">Programming</h3>
+            <div class="text-white md:text-lg text-sm">
               <p class="flex">
                 <span class="mr-2">Languages:</span> 
                 <span class="">JAVA, C++, Python</span>
               </p>
             </div>
           </div>
-          <div class="bg-gray-x p-4 rounded-lg mr-4">
-            <object class="w-10" data="assets/svg-icons/data.svg" type=""></object>
+          <div class="md:bg-transparent bg-gray-x p-4 rounded-lg mr-4 md:order-1">
+            <object class="md:w-16 w-10" data="assets/svg-icons/data.svg" type=""></object>
           </div>
         </div>
       </div>
 
+      </div>
+
     </div>
 
-    <object class="w-full" data="assets/svg-bgs/triangle2.svg" type=""></object>
-
+    <svg class="w-full md:h-24" viewBox="0 0 360 45" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path id="tpath2" d="M360 0H0V45L360 0Z" fill="#0047FF"/>
+    </svg>
+      
     <!-- My education section -->
     <div class="my-education flex flex-col items-center py-12">
       
@@ -188,7 +197,7 @@
 
     </div>
 
-    <object class="w-32 ml-auto px-4" data="assets/svg-icons/overtime.svg" type=""></object>
+    <object class="md:w-64 w-32 ml-auto px-4" data="assets/svg-icons/overtime.svg" type=""></object>
     <!-- My works section -->
     <div class="my-works flex flex-col w-full items-center py-12 bg-gray-x">
       <div class="flex mx-12 items-center my-8">
@@ -199,13 +208,13 @@
       <!-- posters -->
   
       <h3 class="pb-1 border-b text-white my-4">POSTERS/ICON DESIGNS</h3>
-      <div class="flex overflow-x-scroll w-full mx-auto poster-container my-8 items-center">
-        <img class="my-2 w-full px-8" src="./assets/images/posters/Buzzer.jpg" alt="">
-        <img class="my-2 w-full px-8" src="./assets/images/posters/Qafia.jpg" alt="">
-        <img class="my-2 w-full px-8" src="./assets/images/posters/Sankalan-main.jpg" alt="">
-        <img class="my-2 w-full px-8" src="./assets/images/posters/solo singing dark.jpg" alt="">
-        <img class="my-2 w-full px-8" src="./assets/images/posters/Spunk Western Solo Dance.jpg" alt="">
-        <img class="my-2 w-full px-8" src="./assets/images/logos/bionest2.svg" alt="">
+      <div class="flex overflow-x-scroll w-full mx-auto poster-container my-8 items-center md:px-8">
+        <img class="my-2 md:w-1/4 w-full px-8" src="./assets/images/posters/Buzzer.jpg" alt="">
+        <img class="my-2 md:w-1/4 w-full px-8" src="./assets/images/posters/Qafia.jpg" alt="">
+        <img class="my-2 md:w-1/4 w-full px-8" src="./assets/images/posters/Sankalan-main.jpg" alt="">
+        <img class="my-2 md:w-1/4 w-full px-8" src="./assets/images/posters/solo singing dark.jpg" alt="">
+        <img class="my-2 md:w-1/4 w-full px-8" src="./assets/images/posters/Spunk Western Solo Dance.jpg" alt="">
+        <img class="my-2 md:w-1/4 w-full px-8" src="./assets/images/logos/bionest2.svg" alt="">
       </div>
 
 
@@ -220,22 +229,22 @@
 
     </div>
 
-    <object class="w-full" data="assets/svg-bgs/rectangle.svg" type=""></object>
+    <object class="w-full md:h-32" data="assets/svg-bgs/rectangle.svg" type=""></object>
 
     <div class="footer flex flex-col items-center bg-black py-4">
       <object class="h-12" data="assets/svg-icons/my-logo.svg" type=""></object>
       <div class="flex my-6">
         <a href="" class="mx-2">
-          <object class="h-6" data="assets/svg-icons/facebook.svg" type=""></object>
+          <object class="h-6 transform hover:scale-125 transition-all duration-100 " data="assets/svg-icons/facebook.svg" type=""></object>
         </a>
         <a href="" class="mx-2">
-          <object class="h-6" data="assets/svg-icons/linkedin.svg" type=""></object>
+          <object class="h-6 transform hover:scale-125 transition-all duration-100 " data="assets/svg-icons/linkedin.svg" type=""></object>
         </a>
         <a href="" class="mx-2">
-          <object class="h-6" data="assets/svg-icons/cat.svg" type=""></object>
+          <object class="h-6 transform hover:scale-125 transition-all duration-100 " data="assets/svg-icons/cat.svg" type=""></object>
         </a>
         <a href="" class="mx-2">
-          <object class="h-6" data="assets/svg-icons/instagram.svg" type=""></object>
+          <object class="h-6 transform hover:scale-125 transition-all duration-100 " data="assets/svg-icons/instagram.svg" type=""></object>
         </a>
       </div>
       <div class="mt-12 text-white flex items-center">
