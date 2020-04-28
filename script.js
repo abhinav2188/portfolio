@@ -44,9 +44,9 @@ function copyEmailToClipboard() {
   
   window.addEventListener('scroll',function(e) {
     let scrollPercent = (document.documentElement.scrollTop / (this.document.documentElement.clientHeight)).toFixed(2);
-    console.log(document.documentElement.offsetHeight);
-    console.log(document.documentElement.clientHeight);
-    console.log(document.documentElement.scrollTop);
+    // console.log(document.documentElement.offsetHeight);
+    // console.log(document.documentElement.clientHeight);
+    // console.log(document.documentElement.scrollTop);
     
     
     

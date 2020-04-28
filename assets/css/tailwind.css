@@ -595,6 +595,80 @@ video {
   height: auto;
 }
 
+h1{
+  font-size: 1.875rem;
+}
+
+h2{
+  font-size: 1.5rem;
+}
+
+h3{
+  font-size: 1.25rem;
+}
+
+h4{
+  font-size: 1.125rem;
+}
+
+p{
+  font-size: 0.875rem;
+}
+
+h6{
+  font-size: 0.75rem;
+}
+
+.icon1{
+  width: 4rem;
+}
+
+.icon2{
+  width: 2.5rem;
+}
+
+.icon3{
+  width: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  h1{
+    font-size: 2.25rem;
+  }
+
+  h2{
+    font-size: 1.875rem;
+  }
+
+  h3{
+    font-size: 1.5rem;
+  }
+
+  h4{
+    font-size: 1.25rem;
+  }
+
+  h6{
+    font-size: 0.875rem;
+  }
+
+  p{
+    font-size: 1rem;
+  }
+
+  .icon1{
+    width: 6rem;
+  }
+
+  .icon2{
+    width: 3rem;
+  }
+
+  .icon3{
+    width: 2rem;
+  }
+}
+
 .container {
   width: 100%;
 }
@@ -68265,3 +68339,6 @@ video {
     transition-duration: 1000ms;
   }
 }
+
+
+
